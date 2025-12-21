@@ -1,0 +1,81 @@
+name: Download Gemini API Docs
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  download-docs:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Create docs directory
+        run: mkdir -p docs
+      
+      - name: Download all documentation files
+        run: |
+          # Get started
+          curl -o docs/docs.md https://ai.google.dev/gemini-api/docs.md.txt
+          curl -o docs/quickstart.md https://ai.google.dev/gemini-api/docs/quickstart.md.txt
+          curl -o docs/api-key.md https://ai.google.dev/gemini-api/docs/api-key.md.txt
+          curl -o docs/libraries.md https://ai.google.dev/gemini-api/docs/libraries.md.txt
+          curl -o docs/interactions.md https://ai.google.dev/gemini-api/docs/interactions.md.txt
+          
+          # Models
+          curl -o docs/models.md https://ai.google.dev/gemini-api/docs/models.md.txt
+          curl -o docs/gemini-3.md https://ai.google.dev/gemini-api/docs/gemini-3.md.txt
+          curl -o docs/nanobanana.md https://ai.google.dev/gemini-api/docs/nanobanana.md.txt
+          curl -o docs/video.md https://ai.google.dev/gemini-api/docs/video.md.txt
+          curl -o docs/music-generation.md https://ai.google.dev/gemini-api/docs/music-generation.md.txt
+          curl -o docs/imagen.md https://ai.google.dev/gemini-api/docs/imagen.md.txt
+          curl -o docs/embeddings.md https://ai.google.dev/gemini-api/docs/embeddings.md.txt
+          curl -o docs/robotics-overview.md https://ai.google.dev/gemini-api/docs/robotics-overview.md.txt
+          curl -o docs/pricing.md https://ai.google.dev/gemini-api/docs/pricing.md.txt
+          curl -o docs/rate-limits.md https://ai.google.dev/gemini-api/docs/rate-limits.md.txt
+          
+          # Core capabilities
+          curl -o docs/text-generation.md https://ai.google.dev/gemini-api/docs/text-generation.md.txt
+          curl -o docs/video-understanding.md https://ai.google.dev/gemini-api/docs/video-understanding.md.txt
+          curl -o docs/document-processing.md https://ai.google.dev/gemini-api/docs/document-processing.md.txt
+          curl -o docs/structured-output.md https://ai.google.dev/gemini-api/docs/structured-output.md.txt
+          curl -o docs/function-calling.md https://ai.google.dev/gemini-api/docs/function-calling.md.txt
+          curl -o docs/long-context.md https://ai.google.dev/gemini-api/docs/long-context.md.txt
+          
+          # Tools
+          curl -o docs/tools.md https://ai.google.dev/gemini-api/docs/tools.md.txt
+          curl -o docs/deep-research.md https://ai.google.dev/gemini-api/docs/deep-research.md.txt
+          curl -o docs/google-search.md https://ai.google.dev/gemini-api/docs/google-search.md.txt
+          curl -o docs/maps-grounding.md https://ai.google.dev/gemini-api/docs/maps-grounding.md.txt
+          curl -o docs/code-execution.md https://ai.google.dev/gemini-api/docs/code-execution.md.txt
+          curl -o docs/url-context.md https://ai.google.dev/gemini-api/docs/url-context.md.txt
+          curl -o docs/computer-use.md https://ai.google.dev/gemini-api/docs/computer-use.md.txt
+          curl -o docs/file-search.md https://ai.google.dev/gemini-api/docs/file-search.md.txt
+          
+          # Live API
+          curl -o docs/live.md https://ai.google.dev/gemini-api/docs/live.md.txt
+          curl -o docs/live-guide.md https://ai.google.dev/gemini-api/docs/live-guide.md.txt
+          curl -o docs/live-tools.md https://ai.google.dev/gemini-api/docs/live-tools.md.txt
+          curl -o docs/live-session.md https://ai.google.dev/gemini-api/docs/live-session.md.txt
+          curl -o docs/ephemeral-tokens.md https://ai.google.dev/gemini-api/docs/ephemeral-tokens.md.txt
+          
+          # Advanced
+          curl -o docs/batch-api.md https://ai.google.dev/gemini-api/docs/batch-api.md.txt
+          curl -o docs/files.md https://ai.google.dev/gemini-api/docs/files.md.txt
+          curl -o docs/caching.md https://ai.google.dev/gemini-api/docs/caching.md.txt
+          curl -o docs/openai.md https://ai.google.dev/gemini-api/docs/openai.md.txt
+          curl -o docs/media-resolution.md https://ai.google.dev/gemini-api/docs/media-resolution.md.txt
+          curl -o docs/tokens.md https://ai.google.dev/gemini-api/docs/tokens.md.txt
+          curl -o docs/prompting-strategies.md https://ai.google.dev/gemini-api/docs/prompting-strategies.md.txt
+      
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add docs/
+          git commit -m "Update Gemini API documentation" || true
+          git push
