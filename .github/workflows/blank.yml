@@ -35,7 +35,6 @@ jobs:
           # Models
           curl -fsSL -o docs/models.md https://ai.google.dev/gemini-api/docs/models.md.txt
           curl -fsSL -o docs/gemini-3.md https://ai.google.dev/gemini-api/docs/gemini-3.md.txt
-          curl -fsSL -o docs/nanobanana.md https://ai.google.dev/gemini-api/docs/nanobanana.md.txt
           curl -fsSL -o docs/video.md https://ai.google.dev/gemini-api/docs/video.md.txt
           curl -fsSL -o docs/music-generation.md https://ai.google.dev/gemini-api/docs/music-generation.md.txt
           curl -fsSL -o docs/imagen.md https://ai.google.dev/gemini-api/docs/imagen.md.txt
