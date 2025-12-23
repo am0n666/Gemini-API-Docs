@@ -47,6 +47,8 @@ jobs:
           curl -fsSL -o docs/text-generation.md https://ai.google.dev/gemini-api/docs/text-generation.md.txt
           curl -fsSL -o docs/video-understanding.md https://ai.google.dev/gemini-api/docs/video-understanding.md.txt
           curl -fsSL -o docs/document-processing.md https://ai.google.dev/gemini-api/docs/document-processing.md.txt
+          curl -fsSL -o docs/speech-generation.md https://ai.google.dev/gemini-api/docs/speech-generation.md.txt
+          curl -fsSL -o docs/audio.md https://ai.google.dev/gemini-api/docs/audio.md.txt
           curl -fsSL -o docs/structured-output.md https://ai.google.dev/gemini-api/docs/structured-output.md.txt
           curl -fsSL -o docs/function-calling.md https://ai.google.dev/gemini-api/docs/function-calling.md.txt
           curl -fsSL -o docs/long-context.md https://ai.google.dev/gemini-api/docs/long-context.md.txt
