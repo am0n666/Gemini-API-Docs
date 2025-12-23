@@ -28,7 +28,8 @@ To streamline the development of real-time audio and video apps, you can use a t
 Create a real-time AI chatbot using Gemini Live and Pipecat.](https://docs.pipecat.ai/guides/features/gemini-live)[LiveKit
 Use the Gemini Live API with LiveKit Agents.](https://docs.livekit.io/agents/models/realtime/plugins/gemini/)[Fishjam by Software Mansion
 Create live video and audio streaming applications with Fishjam.](https://docs.fishjam.io/tutorials/gemini-live-integration)[Agent Development Kit (ADK)
-Implement the Live API with Agent Development Kit (ADK).](https://google.github.io/adk-docs/streaming/)[Voximplant
+Implement the Live API with Agent Development Kit (ADK).](https://google.github.io/adk-docs/streaming/)[Vision Agents by Stream
+Build real-time voice and video AI applications with Vision Agents.](https://visionagents.ai/integrations/gemini)[Voximplant
 Connect inbound and outbound calls to Live API with Voximplant.](https://voximplant.com/products/gemini-client)
 
 ## Get started
