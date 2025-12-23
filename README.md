@@ -33,6 +33,10 @@ Documentation files are stored in the `docs/` directory.
 - [text-generation.md](./docs/text-generation.md) - Text generation capabilities
 - [video-understanding.md](./docs/video-understanding.md) - Video understanding
 - [document-processing.md](./docs/document-processing.md) - Document processing
+
+- [speech-generation.md](./docs/speech-generation.md) - Speech generation
+- [audio.md](./docs/audio.md) - Audio understanding
+
 - [structured-output.md](./docs/structured-output.md) - Structured output generation
 - [function-calling.md](./docs/function-calling.md) - Function calling capabilities
 - [long-context.md](./docs/long-context.md) - Long context handling
